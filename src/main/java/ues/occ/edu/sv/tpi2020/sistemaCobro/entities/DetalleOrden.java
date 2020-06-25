@@ -16,7 +16,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "detalle_orden", catalog = "tpi_cobros", schema = "")
@@ -27,7 +26,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "DetalleOrden.findByPrecioUnit", query = "SELECT d FROM DetalleOrden d WHERE d.precioUnit = :precioUnit"),
     @NamedQuery(name = "DetalleOrden.findByUpc", query = "SELECT d FROM DetalleOrden d WHERE d.detalleOrdenPK.upc = :upc"),
     @NamedQuery(name = "DetalleOrden.findByDescuento", query = "SELECT d FROM DetalleOrden d WHERE d.descuento = :descuento")})
-@XmlRootElement
 public class DetalleOrden implements Serializable {
 
     private static final long serialVersionUID = 1L;
