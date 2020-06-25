@@ -1,1 +1,1 @@
-web: java -jar target/restauranteBK.jar --port $PORT
+web: java -jar target/sistemaCobros.jar --port $PORT
